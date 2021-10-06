@@ -1,6 +1,8 @@
-# Learning With Text with Docker
+# Learning With Texts with Docker
 
-LWT-docker sets up a container running an apache2 server with lwt.
+LWT-docker sets up a container running an apache2 server with [learning with texts](https://learningwithtexts.com/).
+
+This image is also available on DockerHub as [suzanje/lwt](https://hub.docker.com/r/suzanje/lwt).
 
 ## Usage
 
