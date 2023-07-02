@@ -14,7 +14,7 @@ RUN rm /var/www/*.txt
 RUN unzip /var/www/lwt_v_2_0_2.zip
 RUN cp /var/www/connect_xampp.inc.php /var/www/connect.inc.php
 RUN sed -i 's/\$userid = "root";/\$userid = getenv("MARIADB_USER");/g' /var/www/connect.inc.php
-RUN sed -i 's/\$passwd = "";/\$passwd = getenv("MARIADB_ROOT_PASSWORD");/g' /var/www/connect.inc.php
+RUN sed -i 's/\$passwd = "";/\$passwd = getenv("MARIADB_PASSWORD");/g' /var/www/connect.inc.php
 RUN sed -i 's/\$server = "localhost";/\$server = getenv("MARIADB_SERVER");/g' /var/www/connect.inc.php
 
 ADD httpd.conf /etc/apache2/httpd.conf
