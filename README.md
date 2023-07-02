@@ -18,7 +18,8 @@ services:
     image: mariadb:10.6
     restart: always
     environment:
-      - "MARIADB_ROOT_PASSWORD=qwerty"
+      - "MARIADB_USER=lwt"
+      - "MARIADB_PASSWORD=qwerty"
     volumes:
       - media/:/var/lib/mysql
   lwt:
@@ -26,7 +27,8 @@ services:
     restart: always
     environment:
       - "MARIADB_SERVER=mariadb"
-      - "MARIADB_ROOT_PASSWORD=qwerty"
+      - "MARIADB_USER=lwt"
+      - "MARIADB_PASSWORD=qwerty"
     ports:
       - "8080:80"
     depends_on:
@@ -36,6 +38,6 @@ services:
 You can also probably run it with docker-run like the following
 
 ```shell
-docker run -d --port "80:8080" --link mariadb_container -e MARIADB_SERVER=db -e MARIADB_ROOT_PASSWORD=qwerty lwt
+docker run -d --port "80:8080" --link mariadb_container -e MARIADB_SERVER=db -e MARIADB_USER=lwt -e MARIADB_PASSWORD=qwerty lwt
 ```
 
