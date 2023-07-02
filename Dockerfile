@@ -1,7 +1,7 @@
 FROM alpine:3.13
 RUN apk update
 RUN apk upgrade
-RUN apk add php8 curl apache2 php8-apache2 php-mbstring
+RUN apk add php8 curl apache2 php8-apache2 php8-mbstring
 RUN apk add php8-mysqlnd php8-mysqli php8-curl php8-session php8-json
 
 RUN mkdir -p /var/www/media && chmod -R 755 /var/www
