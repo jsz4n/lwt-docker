@@ -1,10 +1,9 @@
-FROM alpine:3.16
+FROM alpine:3.18
 RUN apk update
 RUN apk upgrade
 
-RUN apk add php8 curl apache2 php8-apache2 php8-mbstring
-RUN apk add php8-mysqlnd php8-mysqli php8-curl php8-session php8-json
-
+RUN apk add php82 curl apache2 php82-apache2 php82-mbstring
+RUN apk add php82-mysqlnd php82-mysqli php82-curl php82-session php81-json
 
 RUN mkdir -p /var/www/media && chmod -R 755 /var/www
 RUN wget https://sourceforge.net/projects/learning-with-texts/files/learning_with_texts_2_0_3_complete.zip/download -O /var/www/lwt.zip
