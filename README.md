@@ -2,7 +2,9 @@
 
 LWT-docker sets up a container running an apache2 server with [learning with texts](https://learningwithtexts.com/).
 
-This image is also available on DockerHub as [suzanje/lwt](https://hub.docker.com/r/suzanje/lwt).
+The images are also available on DockerHub as [jsz4n/lwt](https://hub.docker.com/r/jsz4n/lwt).
+
+(The first version was/is still available here: [suzanje/lwt](https://hub.docker.com/r/suzanje/lwt))
 
 ## Usage
 
